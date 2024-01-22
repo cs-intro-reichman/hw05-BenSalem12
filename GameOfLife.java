@@ -89,7 +89,7 @@ public class GameOfLife {
 				for (int j = 0; j < strLine.length(); j++) {
 					ch = strLine.charAt(j);
 					if (ch == 'x'){
-						board[i][j] = 1;
+						board[i+1][j+1] = 1;
 					}
 				}
 			}
@@ -186,8 +186,8 @@ public class GameOfLife {
 		int rows = arr.length;
 		int cols = arr[0].length;
 
-		for (int i = 0; i <	rows-2; i++) {
-			for (int j = 0; j < cols-2; j++) {
+		for (int i = 1; i <	rows-1; i++) {
+			for (int j = 1; j < cols-1; j++) {
 				System.out.printf("%3s",arr[i][j]);
 			}
 			System.out.println("");
